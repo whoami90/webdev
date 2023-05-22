@@ -1,0 +1,200 @@
+<h1>Tabela HTML</h1>
+</br>
+<table border="1">
+    <tr>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td>Profissão</td>
+    </tr>
+    <tr>
+        <td>João</td>
+        <td>22</td>
+        <td>Conferente</td>
+    </tr>
+    <tr>
+        <td>Gabriel</td>
+        <td>26</td>
+        <td>Auxiliar de armazem</td>
+    </tr>
+</table>
+
+</br>
+
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Profissão</th>
+    </tr>
+    <tr>
+        <td>Ted</td>
+        <td>22</td>
+        <td>Estudante</td>
+    </tr>
+    <tr>
+        <td>Ralf</td>
+        <td>26</td>
+        <td>Designer</td>
+    </tr>
+</table>
+
+</br>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>titulo 1</th>
+        <th>titulo 2</th>
+        <th>titulo 3</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Body1 linha1</td>
+        <td>Body2 linha1</td>
+        <td>Body3 linha1</td>
+    </tr>
+    <tr>
+        <td>Body1 linha2</td>
+        <td>Body2 linha2</td>
+        <td>Body3 linha2</td>
+    </tr>
+    </tbody>
+    <tfoot>
+        <td>Foot 1</td>
+        <td>Foot 2</td>
+        <td>Foot 3</td>
+    </tfoot>
+ </table>
+
+</br>
+<h1>Criando células vazias</h1>
+</br>
+ <table>
+    <tr>
+        <th>&nbsp;</th>
+        <th>Valor</th>
+    </tr>
+    <tr>
+        <td>Item 1</td>
+        <td>R$10,00</td>
+    </tr>
+    <tr>
+        <td>Item 2</td>
+        <td>R$20,00</td>
+    </tr>
+</table>
+</br>
+<h1>Células que abrangem mais que uma linha/coluna</h1>
+</br>
+<h2>Primeiro, utilizando colspan:</h2>
+<table border="1">
+    <tr>
+        <th>Nome</th>
+        <th colspan="2">Telefones</th>
+    </tr>
+    <tr>
+        <td>Ted</td>
+        <td>8888-8888</td>
+        <td>9999-9999</td>
+    </tr>
+    <tr>
+        <td>Junior</td>
+        <td>1111-1111</td>
+        <td>2222-2222</td>
+    </tr>
+</table>
+</br>
+<h2>Agora utilizando rowspan:</h2>
+</br>
+<table border="1">
+    <tr>
+      <th>Primeiro Nome:</th>
+      <td>Ted</td>
+    </tr>
+    <tr>
+      <th rowspan="2">Telefone:</th>
+      <td>8888-8888</td>
+    </tr>
+    <tr>
+      <td>9999-9999</td>
+    </tr>
+    </table>
+</br>
+<h1>Título da tabela</h1>
+</br>
+<table border="1">
+    <caption>Exemplo de Título</caption>
+    <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+    </tr>
+    <tr>
+        <td>Ted</td>
+        <td>Junior</td>
+    </tr>
+    <tr>
+        <td>Ted</td>
+        <td>Neto</td>
+    </tr>
+</table>
+</br>
+<h2>Utilizando o colgroup e col</h2>
+</br>
+<style>
+    .vermelho{
+        background-color: red;
+    }
+    .amarelo{
+        background-color: yellow;
+    }
+    .azul{
+        background-color: blue;
+    }
+</style>
+
+<table border="1">
+  <colgroup>
+    <col class="vermelho">
+    <col class="amarelo">
+    <col class="azul">
+  </colgroup>
+  <tr>
+    <th>Nome</th>
+    <th>Idade</th>
+    <th>Profissao</th>
+  </tr>
+  <tr>
+    <td>Ted</td>
+    <td>22</td>
+    <td>Estudante</td>
+  </tr>
+  <tr>
+    <td>Junior</td>
+    <td>26</td>
+    <td>Escritor</td>
+  </tr>
+</table>
+</br>
+<table border="1">
+    <colgroup>
+      <col span="2" style="background-color:red">
+      <col style="background-color:yellow">
+    </colgroup>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Profissao</th>
+    </tr>
+    <tr>
+      <td>Ted</td>
+      <td>22</td>
+      <td>Estudante</td>
+    </tr>
+    <tr>
+      <td>Junior</td>
+      <td>26</td>
+      <td>Escritor</td>
+    </tr>
+  </table>
+</br>

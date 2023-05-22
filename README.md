@@ -171,5 +171,119 @@ Para realizar a gestão desses dados, existem os SGBD, ou sistemas gerenciadores
 
 ***
 
-## Tecnologias do lado servidor: linguagem PHP e acesso a dados
+# Linguagem de marcação de hipertexto HTML
 
+*O objetivo principal de uma linguagem de marcação de hypertexto, e mais especificamente da HTML – que será usada como linguagem padrão e alvo de nosso estudo –, é o de estruturar o conteúdo de um documento. Este conteúdo pode ser composto de textos, figuras, tabelas etc*
+
+*Estrutura, por sua vez, pode ser definida como a organização dos elementos de conteúdo. Para realizar essa função, a HTML faz uso de um sistema hierárquico de elementos chamados de tags.*
+
+**Estrutura da linguagem HTML**
+
+* Tags textuais 
+* Tabelas e Listas
+* Formulários
+* Tags semânticas
+* Links
+* Estrutura (representada por DOM - Document Object Model)
+
+### Estrutura
+~~~~~
+<! doctype html>
+<html lang = "pt">
+            Raiz
+<head>
+
+        Cabeçalho
+
+</head>
+
+<body>
+
+        CORPO
+
+</body>
+
+</html>
+~~~~~
+
+~~~~~
+document >
+
+            <html>
+
+                    <head>
+
+                        <title>
+
+                            text: my title
+
+                    <body>
+
+                            <h1>
+
+                                text: A heading 
+
+                            <a>        href 
+
+                                text: link text           
+~~~~~
+
+root element - html
+
+element - head, title, body, h1 a h6, a 
+
+attribute - href
+
+***
+
+### Tags textuais
+
+div
+
+p 
+
+a 
+
+img
+
+h1 a h6
+
+***
+### Tags de formatação  
+*hoje em dia não é muito usado, no lugar é usado o css.*
+
+strong
+
+mark
+
+abbr
+
+del
+
+em
+
+sub
+
+sub
+
+### Tags semânticas
+*usados em sistemas de busca*
+
+header 
+
+main
+
+section
+
+nav
+
+article
+
+footer
+
+aside
+
+***
+### Tabelas e listas
+
+*Ver documentos de exemplos em tabelas e listas*
