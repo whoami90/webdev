@@ -301,3 +301,118 @@ O Doctype não é uma tag HTML, mas sim uma instrução. É uma declaração que
 
 **Ver exemplos na pasta document type definition**
 
+****
+### Estrutura de uma página web
+
+**Elementos obrigatórios**
+
+~~~~
+<!DOCTYPE html>   
+<html>              
+    <head>          
+
+    </head>
+    <body>          
+        
+    </body>
+</html>
+~~~~
+**!DOCTYPE - declaração do DOCTYPE**
+
+**html - raiz do documento**
+
+    *   Dentro do da tag raiz fica o atributo lang:
+           
+            <html lang="en-US"> - english United States
+            <html lang="en-GB"> - english gram Brittany
+            <html lang="pt-br"> - portugues Brasil
+
+**head - cabeçalho**
+
+    *   Dentro da tag head:
+
+        <title> - título, visualizada na barra de titulo do navegador.
+        <meta> - engloba série de informações, descrição de página, palavras chaves e etc
+        <script> - responsável pela inclusão e/ou definição de scripts relacionados ao documento
+        <link> - responsável pela inclusão de folhas de estilo (externas) relacionadas ao documento. Possibilita também a inclusão de favicons (pequenos itens que aparecem na barra de endereços do navegador.)
+        <style> Assim como o anterior, é responsável pelo vinculo de folhas de estilo ao documento - quando elas são declaradas diretamente no documento. 
+
+**body - corpo**
+
+    * Responsável pela estruturação do documento, sobretudo de seu conteúdo e também apresentação, embora seja recomendado que a apresentação do documento, seja feito por meio de folhas de estilo (CSS). 
+
+****
+**Exemplos**
+*Pasta exemplo 6, simple*
+
+
+### Tipos e composição das tags
+
+As tags podem ser divididas em tipos, de acordo com as suas funções: Estruturais, textuais e semânticas. Outra característica importante é que elas também podem ter atributos. A seguir, falaremos sobre cada um desses temas.
+
+**Os atributos**
+
+Os atributos servem para que algumas características sejam adicionadas a um elemento, a uma tag. São compostos por um nome e por um valor.
+
+~~~~
+<img src="imagem.jpg" alt="minha imagem"/>
+~~~~
+Esta tag é utilizada para a inserção de imagens no documento. Temos dois exemplos de atributos em sua declaração: src e alt, que são nomes de atributo; e “imagem.jpg” e “minha imagem” são seus valores, respectivamente.
+
+O atributo “src” define o endereço e o nome da imagem. Já o atributo “alt” define um texto alternativo a ser exibido no navegador caso a imagem não seja carregada.
+
+Há uma enorme variedade de atributos, assim como de relacionamentos entre eles e as tags. Ao longo dos próximos módulos, veremos alguns dos principais, lembrando que o site do W3C contém a lista completa de atributos e combinações. Por ora, cabe ainda destacar dois atributos de extrema importância no desenvolvimento Web:
+
+**ID**
+
+Utilizado para definir um identificador, que deve ser único, para uma tag em um documento.
+
+
+
+**CLASS**
+
+Usado para definir uma classe à qual uma ou mais tags pertencem. Com base nesses dois tipos de identificação, é possível, por exemplo, fazer referência a um ou mais atributos para inserirmos estilização visual nas páginas, através de Folhas de Estilo ou eventos e interação, através de Javascript.
+
+Tipos de tags: **textuais e semânticas**
+
+Até aqui, conhecemos algumas tags associadas à estrutura, dita obrigatória, de uma página. Também vimos que, na maioria dos casos, as páginas Web possuem uma mesma estrutura em termos de conteúdo. A seguir, conheceremos os tipos de tag textuais e semânticos.
+
+**Tags textuais**
+
+São responsáveis por **organizar o conteúdo da página**, ou seja, textos, mídias e links, por exemplo. Algumas das principais tags textuais, inclusive vistas anteriormente, são: <p>, <h1> ... <h6>, <img> e <a>. Essas tags e suas funções serão descritas a seguir.
+
+**Tags semânticas**
+
+A partir da HTML5 foram inseridas tags com a função semântica de **organizar a estrutura de conteúdo de uma página**. Logo, voltando ao exemplo de seções básicas de uma página, nossa página ficaria assim:
+
+**Exemplo**
+*pasta exemplo 6, simple2*
+
+Ao analisar a figura, é possível perceber que existem tags específicas para cada seção do conteúdo. Essa é uma característica importante da HTML, chamada de semântica.
+
+Logo, semântica, neste contexto, pode ser considerada a correta utilização de uma tag HTML de acordo com o seu conteúdo ou finalidade.
+
+Isso cria uma organização no documento que facilita tanto para você, que o escreveu, quanto para outras pessoas que venham a editar o mesmo documento. Além disso, muitos dispositivos fazem uso dessa marcação para uma correta interpretação do conteúdo ali contido.
+
+Veja outras tags e suas respectivas funções:
+
+<article> - Inclui um bloco  de conteúdo que deve ser usado quando se deseja inserir um artigo, como um post de um blog, por exemplo.
+
+<section> - Define uma seção no documento. É normalmente utilizado para agrupar seções. Por exemplo: uma <section> pode agrupar várias   <article>
+
+<h1> a <h6>  - Usados para determinar o tamanho do caractere, h1 é para títulos e quanto maior o numero, menor o caractere.
+
+<p> - inserir parágrafos no texto
+
+<pre> - inserir texto pré formatado.
+
+<div> - embora não seja considerada semântica, pode ser usada para agrupar algum tipo de conteúdo que não tenha nenhuma semântica específica ou que não se encaixa bem dentro de uma tag semântica. 
+
+<span> - É semelhante à <div>. Entretanto, enquanto a <div> é um elemento não semântico no bloco (quando usada, quebra o conteúdo em uma seção), a <span> é embutida (não quebra o conteúdo, apenas o agrupa).
+
+<a> - usada para inserir links
+
+<br /> - Usada para inserir quebra de linha. 
+
+<hr> - Insere uma linha horizontal no documento. Normalmente é utilizada quando se pretende alterar a temática de um texto.
+
