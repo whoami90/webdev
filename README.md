@@ -287,3 +287,17 @@ aside
 ### Tabelas e listas
 
 *Ver documentos de exemplos em tabelas e listas*
+***
+
+# Linguagem de marcação de hypertexto - HTML
+
+O objetivo principal de uma linguagem de marcação de hypertexto, e mais especificamente da html, é o de estruturar o conteúdo de um documento. Este conteúdo pode ser composto de textos, figuras, tabelas etc. 
+
+Estrutura, que pode ser definida como a organização dos elementos de conteudo. Para realziar essa função, a HTML faz uso de um sistema hierárquico de elementos chamados de tags. 
+
+## Estrutura de uma página HTML
+
+O Doctype não é uma tag HTML, mas sim uma instrução. É uma declaração que serve para informar ao navegador qual a versão da HTML usada em um arquivo HTML.
+
+**Ver exemplos na pasta document type definition**
+
