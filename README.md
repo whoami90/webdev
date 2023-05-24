@@ -379,7 +379,10 @@ Até aqui, conhecemos algumas tags associadas à estrutura, dita obrigatória, d
 
 **Tags textuais**
 
-São responsáveis por **organizar o conteúdo da página**, ou seja, textos, mídias e links, por exemplo. Algumas das principais tags textuais, inclusive vistas anteriormente, são: <p>, <h1> ... <h6>, <img> e <a>. Essas tags e suas funções serão descritas a seguir.
+São responsáveis por **organizar o conteúdo da página**, ou seja, textos, mídias e links, por exemplo. Algumas das principais tags textuais, inclusive vistas anteriormente, são: 
+~~~~
+<p>, <h1> ... <h6>, <img> e <a>. Essas tags e suas funções serão descritas a seguir.
+~~~~
 
 **Tags semânticas**
 
@@ -395,24 +398,77 @@ Logo, semântica, neste contexto, pode ser considerada a correta utilização de
 Isso cria uma organização no documento que facilita tanto para você, que o escreveu, quanto para outras pessoas que venham a editar o mesmo documento. Além disso, muitos dispositivos fazem uso dessa marcação para uma correta interpretação do conteúdo ali contido.
 
 Veja outras tags e suas respectivas funções:
-
+~~~~
 <article> - Inclui um bloco  de conteúdo que deve ser usado quando se deseja inserir um artigo, como um post de um blog, por exemplo.
-
+~~~~
+~~~~
 <section> - Define uma seção no documento. É normalmente utilizado para agrupar seções. Por exemplo: uma <section> pode agrupar várias   <article>
-
+~~~~
+~~~~
 <h1> a <h6>  - Usados para determinar o tamanho do caractere, h1 é para títulos e quanto maior o numero, menor o caractere.
-
+~~~~
+~~~~
 <p> - inserir parágrafos no texto
-
+~~~~
+~~~~
 <pre> - inserir texto pré formatado.
-
+~~~~
+~~~~
 <div> - embora não seja considerada semântica, pode ser usada para agrupar algum tipo de conteúdo que não tenha nenhuma semântica específica ou que não se encaixa bem dentro de uma tag semântica. 
-
+~~~~
+~~~~
 <span> - É semelhante à <div>. Entretanto, enquanto a <div> é um elemento não semântico no bloco (quando usada, quebra o conteúdo em uma seção), a <span> é embutida (não quebra o conteúdo, apenas o agrupa).
-
+~~~~
+~~~~
 <a> - usada para inserir links
-
+~~~~
+~~~~
 <br /> - Usada para inserir quebra de linha. 
-
+~~~~
+~~~~
 <hr> - Insere uma linha horizontal no documento. Normalmente é utilizada quando se pretende alterar a temática de um texto.
+~~~~
+### Tipos de tags: textuais e semânticas
+
+*vide pasta tags textuais e semanticas*
+
+*vide pasta vamos praticar 1*
+
+###Tags de formatação
+
+A última versão HTML ainda dá suporte a algumas tags direcionadas à formatação visual de conteúdo. Embora possam ser substituídas por CSS, quatro delas merecem atenção especial:
+
+~~~~
+<b>: aplica o efeito de negrito em um texto;
+<strong>: aplica o efeito de negrito em um texto e o marca como importante;
+<i>: aplica o efeito de itálico em um texto;
+<em>: aplica o efeito de itálico e dá ênfase a um texto.
+~~~~
+
+**O destaque que tais elementos merecem diz respeito à função semântica que as tags < strong > e < em > exercem.**
+
+É interessante notar que as duas produzem o mesmo efeito visual (que <b> e <i> respectivamente) em um texto, ou seja, marcá-lo como negrito e/ou itálico. Entretanto, há uma diferença importante entre elas, que vai além da visualização do texto no navegador pela maioria dos usuários. A função semântica de ambas é perceptível em dispositivos de leitura de tela, que transformam o texto em áudio, e normalmente são utilizados por pessoas com deficiência visual.
+
+**Tags obsoletas**
+
+A cada nova versão da HTML, novas tags são criadas, assim como antigas são descontinuadas. Estas, chamadas de obsoletas, embora ainda possam ter suporte em boa parte dos navegadores, devem ser evitadas pelo seguinte motivo:
+
+*   Em primeiro lugar, porque provavelmente foram substituídas por novas tags, com melhor semântica.
+*   Em segundo lugar, pelo risco de desconfigurarem o conteúdo da página, uma vez que os browsers podem deixar de suportá-las a qualquer momento.
+
+| Tag | Função|
+|-----|-------|
+|< applet > | Identifica a inclusão de um applet Java |
+|< center > | Centraliza horizontalmente o conteúdo de um bloco |
+|< dir > | Container para lista de diretórios ou arquivos. |
+|< font > | Determina características relacionadas a fontes de um determinado elemento |
+|< image> | Ancestral da tag < img >, era usado nas primeiras versões HTML para inserção de imagens |
+
+Atualmente consideradas obsoletas, as tags <center> e <font> ainda são usadas em muitas páginas HTML. Ambas se enquadram no conceito de que não é função da HTML cuidar da apresentação. Logo, as duas foram substituídas por propriedades CSS.
+
+**Exemplo prático de comparação das tags obsoletas:**
+*vide pasta tags obsoletas*
+
+
+# Tags HTML complexas
 
