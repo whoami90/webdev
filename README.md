@@ -573,3 +573,95 @@ Os três atributos aqui descritos são apenas uma prévia, uma vez que há algun
 
 Ao final deste módulo, vamos inserir novas tags em nosso arquivo HTML. Inclua ao menos uma tag de vídeo e uma de áudio. Além disso, experimente inserir e remover os controles mencionados, sempre salvando e comparando os resultados no navegador.
 
+**vide exemplo midias_exemplo**
+
+### Vamos praticar: 
+
+**vide vamos_praticar_3**
+
+# Formulários em páginas web
+
+## Estrutura básica do formulário
+
+A exemplo do que vimos com as tabelas, o formulário é composto por uma  **tag principal**, um  **container**, e várias  **tags “filhas”**.Tags como campos de texto, de uma ou mais linhas; campos de seleção; e botões fazem parte de sua estrutura.
+
+Além disso, para maior clareza, também usamos tags para informar a função dos campos do formulário. São as chamadas “label”. A tabela a seguir lista as tags comumente usadas em um formulário:
+
+|Tag| Função |
+|--|--|
+|< form>  |Container principal do formulário  |
+|< input> | Campo do formulário. Como há diversos tipos de campos, fazemos uso do atributo “type” para informar o tipo a ser utilizado – conforme veremos mais adiante.|
+|< textarea >|Campo de texto de múltiplas linhas.|
+|< select > e < option >|Campos de seleção, onde o container é definido pela tag < select > e os itens pela tag < option >.|
+|button|Campo de botão. Permite que uma ação seja executada no formulário – enviar o formulário, limpar os dados etc. |
+|label|Usado para definir um título, uma legenda, que descreva para que serve cada campo do formulário|
+
+***
+
+### Conhecendo melhor os elementos e atributos do formulário
+
+Na próxima imagem temos o **fragmento HTML correspondente a um formulário**. Nela é possível ver as tags já mencionadas, assim como algumas tipificações nos campos e novos atributos. Falaremos sobre ambos a seguir:
+
+**Vide exemplo_de_formulário1**
+
+É fácil identificar para o que serve cada campo do formulário anterior ao lermos o conteúdo da tag < label>. Além disso, a tag < fieldset> cria seções dentro do formulário, ajudando a separar os campos no código e a visualizar a página no navegador.
+
+Isso fica ainda mais claro quando vinculamos ao < fieldset> a tag < legend>.
+
+Como vimos, é necessária uma atenção especial aos atributos quando tratamos de formulários.
+
+Para melhor visualização e entendimento, todos os atributos contidos no código mencionado são descritos nesta tabela:
+
+|Tag|Atributo  |Função do atributo |
+|--|--|--|
+| < form > |action  |  Define a URL (endereço) para a qual os dados do formulário serão enviados.
+|< form>|method |Define o método HTTP (POST ou GET) para envio dos dados.
+| < label>| for|Vincula a tag < label> ao campo ao qual ela se refere. Este vínculo faz com que seja possível clicar na label para ativar o campo relacionado.
+| < input>| minlength, maxlength| Definem a quantidade de caracteres mínima e máxima, respectivamente, permitida em um campo.
+|< input>, < button>|type|Define o tipo do campo e, sobretudo, como ele se comporta.
+|< option>|value|Este atributo também pode ser utilizado na tag < input>. Ele define o valor do campo. No caso da < option>, os seus valores possíveis são previamente definidos quando a página é codificada. Já na < input>, embora também possa ser previamente definido, normalmente é o usuário quem define o seu valor.
+
+## Atributos do formulário
+### O atributo *"type"*
+
+Este atributo, dada a sua importância, precisa ser visto de forma aprofundada. Como já dito, além de  **definir o tipo do campo**, ele também  **determina como este se comporta**. No código apresentado na tabela é utilizado apenas o tipo “text”, que, no caso da tag <input>, corresponde ao seu valor padrão.
+
+Alguns outros tipos comuns são:
+
+ - Password
+	 - Marca textos com asteriscos
+ - Hidden
+	 - Esconde o campo para não ser exibido no navegador.
+ - Checkbox
+	 - Usado para seleção de valor através de click/check.
+ - Radio
+	 - Usado para seleção exclusiva de valor – quando é apresentada mais de uma opção, apenas uma poderá ser selecionada, ao contrário do tipo “checkbox”.
+ - Submit
+	 - Associada à tag < button>, dispara o evento que envia/submete o formulário.
+ - Reset 
+	 - Associada à tag <button>, dispara o evento que limpa os valores do formulário.
+ - Button
+	 - Uma tag < input> pode ser do tipo “button” – exercendo, assim, a mesma função da tag < button>.
+
+Ao longo de vários anos, havia apenas esses tipos disponíveis na HTML. Com isso, algumas necessidades − fossem de inserção de tipos de dados específicos, fossem de validação de valores, conforme veremos mais adiante −  **não podiam**  ser supridas  **apenas com a utilização de tags**, sendo necessário combinar códigos Javascript e CSS. Por exemplo: um campo para seleção de data.
+
+Além disso,  **novos tipos de dados**, com características específicas,  **ganharam importância ao longo dos anos**. Podemos citar, como exemplo, o e-mail. Embora seja um campo de texto, ele possui um padrão de composição próprio, como o uso de @, entre outras características.
+
+### Novos atributos e tipos
+
+Pensando nas deficiências citadas, e como é comum na evolução da HTML, a HTML5 definiu **novos tipos de entrada** e também **novos atributos relacionados** a formulários. Entre eles, podemos destacar:
+
+**Atributos:**                     
+
+|Atributo | Função | Comentário|
+|----|-----|----|
+| place |Exibir um texto no campo de input.|Utilizado para dar uma dica ao usuário sobre o dado a ser inserido.
+|required | Determinar se um campo é obrigatório | Utilizado na validação dos dados de um formulário
+|autofocus | fixar o foco no campo | Utilizado quando desejamos que, ao carregar o formulário, um determinado campo seja focado.
+|pattern | Validar o valor de um campo com base em uma expressão regular | O campo de tel. é um bom exemplo de utilização desse atributo. Com ele podemos, por exemplo, determinar a quantidade de caracteres e o formato esperado para um campo.
+
+
+
+**Exemplo de pattern:**
+As RegEX expressões regulares – podem ser consideradas um recurso de linguagem de programação para a análise e manipulação de texto.
+
