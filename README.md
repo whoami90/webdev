@@ -665,3 +665,55 @@ Pensando nas deficiências citadas, e como é comum na evolução da HTML, a HTM
 **Exemplo de pattern:**
 As RegEX expressões regulares – podem ser consideradas um recurso de linguagem de programação para a análise e manipulação de texto.
 
+## Tipos
+| tipo | Função  | Comentário |
+|--|--|--|
+|tel|Inserir números de telefone.|Para uma melhor usabilidade, deve ser usado em conjunto com o atributo pattern.|
+|datetime|Inserir datas com o fuso horário em UTC a partir de um calendário.|
+|date|Inserir datas sem fuso horário a partir de um calendário. |
+| number|Inserir números.|Cria um componente diferente do imput normal, em que, por meio de setas, os números podem ser incrementados ou decrementados.|
+
+*Uma lista completa dos atributos e tipos pode ser encontrada nas referências mencionadas na seção Explore +.*
+
+### Validação de dados em formulários
+
+Para explicarmos a criação de um formulário HTML, apresentamos tags e atributos que nos permitem montar um formulário já funcional, pronto para ser preenchido e submetido. Entretanto, há um outro aspecto relacionado a esses elementos que precisa ser discutido:  **A validação de dados**.
+
+A importância da validade dos dados concorre com a importância da utilização das tags corretas e que permitam a  **melhor experiência possível aos usuários**. Podemos dizer que, ao pensarmos na estrutura do formulário, nas tags e atributos, estamos pensando em quem vai preencher o formulário.
+
+**Exemplo**
+Imagine que podemos permitir a inserção de uma data de nascimento através da digitação de valores ou a partir da seleção em um elemento do tipo calendário. Agora pense em quem vai receber as informações provenientes do formulário. Em um campo de texto simples, sem nenhum tipo de padrão, serão recebidas as mais variadas combinações de dados.
+
+Por exemplo: 01 de janeiro de 1980; 01/01/1980; 01011980 etc. Imaginando esse cenário, é possível entender a importância da validação das informações.
+
+##  Como funciona a validação?
+
+A validação é um processo que pode, e deve, ocorrer tanto no  **lado cliente**  – no navegador – quanto no  **lado servidor**. Pensando no lado cliente, essa ação ocorre assim que o formulário é submetido, antes que os dados sejam recebidos pelo servidor de destino.
+
+Até há bem pouco tempo, para validar um formulário era necessário fazer uso de Javascript. Entretanto, na HTML5 é possível fazê-lo de forma nativa, sem o uso de linguagens de programação.
+
+### Tipos de validação
+Na HTML5 há dois tipos de validação possíveis:
+
+* Que verifica se o dado inserido em um campo é consistente com o seu tipo e/ou padrão (pattern).
+* Que verifica se um campo obrigatório foi preenchido.
+
+**Exemplo**
+
+Quanto à primeira validação, podemos citar novamente o elemento input do tipo “e-mail”.
+
+Um endereço de e-mail é um dado que possui uma formatação pré-definida: precisa ter o “@”; precisa ter a extensão de domínio “.com / .com.br” etc.
+
+Logo, declarar uma tag input com o type “e-mail” faz com que, naturalmente, seja validado o seu conteúdo.
+
+Algo semelhante acontece com a utilização do atributo pattern, sendo que, neste caso, é você quem define o que um campo precisa conter para ser considerado válido. Por exemplo: determinar o formato desejado para um campo que receba um número de telefone.
+
+Você pode definir que ele contenha o DDD, com dois caracteres numéricos, seguido por dois conjuntos de números – um contendo 5 e outro contendo 3 ou 4 caracteres – o que geraria este código: pattern=“[0−9]2  [0-9]{5}-[0-9]{3,4}$”.
+
+Além da validação pelo tipo de dado, há também a validação de campos obrigatórios. Logo, quando precisamos que determinado campo não fique em branco, usamos o atributo “required”.
+
+*vamos praticar*
+**vide vamos_praticar4**
+
+**Fim da matéria html**
+****
