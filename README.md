@@ -717,3 +717,43 @@ Além da validação pelo tipo de dado, há também a validação de campos obri
 
 **Fim da matéria html**
 ****
+# Linguagem de marcação e estilos - CSS
+
+*A CSS, ou folhas de Estilo em Cascata (Cascading Style Sheets), é uma linguagem de estilo que fornece total controle sobre a apresentação de um documento escrito em HTML.*
+
+*No ambiente web, a HTML é a linguagem responsável pela estrutura do conteúdo de uma página. Embora também seja capaz de organizar o conteúdo visualmente, é função da CSS cuidar desse aspecto e de tudo relacionado ao estilo e layout da página.*
+
+*Com a CSS, é possível, por exemplo, alterar a forma e o posicionamento dos elementos, as cores, tipos e tamanhos de fontes, e muito mais.*
+
+*seletores css:*
+mídias/tabela-seletores-css3.png
+
+## Fundamentos do CSS
+
+A CSS, ou Folhas de Estilo em Cascata (Cascading Style Sheets), é uma linguagem de estilo que fornece total controle sobre a apresentação de um documento escrito em HTML. Por meio dela, é possível, por exemplo, alterar a forma e o posicionamento dos elementos, as cores, os tipos e tamanhos de fontes e muito mais.
+
+A CSS permite a aplicação seletiva de estilos a elementos em uma página HTML. Isso significa dizer que um ou mais estilos podem ser aplicados em um documento inteiro ou mesmo em apenas parte dele. Além disso, um mesmo tipo de elemento pode ter, ao longo do documento, diferentes estilos.
+
+## Sintaxe do CSS
+
+Para aplicar um estilo CSS a um elemento específico, é necessário identificá-lo e apontar qual de suas propriedades queremos alterar e qual valor queremos atribuir-lhe. Essas três informações definem a sintaxe da CSS, conforme pode ser visto no exemplo a seguir.
+
+~~~~~~~~
+p{
+    background-color: blue;
+}
+~~~~~~~~
+p = Seletor
+background-color: = propriedade
+blue = valor
+
+Tendo o exemplo anterior como base, podemos perceber que, para aplicarmos um estilo utilizando CSS, são necessários:
+
+*   O seletor: nesse caso, a tag HTML < p >.
+*   Ao menos uma propriedade: a cor de fundo (background-color).
+*   Ao menos um valor para a propriedade: blue.
+
+Essa declaração de estilo faria com que todas as tags < p > do documento apresentassem a cor azul ao fundo. O exemplo utilizou apenas uma declaração (propriedade + valor), mas é possível inserir em conjunto várias outras.
+
+Além dos aspectos mencionados acima, há outros importantes com relação à sintaxe:
+
