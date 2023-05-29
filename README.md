@@ -757,3 +757,527 @@ Essa declaração de estilo faria com que todas as tags < p > do documento apres
 
 Além dos aspectos mencionados acima, há outros importantes com relação à sintaxe:
 
+*   A propriedade e seu valor devem ser separados por dois pontos “:”.
+
+*   Uma declaração deve ser separada da declaração subsequente com a utilização do ponto e vírgula “;”.
+
+*   O conjunto de estilos aplicados a um seletor é envolvido por chaves “{“ e “}”.
+
+
+Vamos ver a seguir um exemplo de duas propriedades atribuídas à tag < p > e o resultado dessas declarações no navegador.
+
+**vide exemplos:**
+*básico*
+
+## Seletores
+
+Vimos nos exemplos anteriores um estilo sendo declarado em uma tag HTML < p >. Nós nos referimos a essa tag como sendo o seletor ao qual o estilo foi aplicado. Existem muitos outros seletores disponíveis além daqueles correspondentes às tags HTML, conforme veremos a seguir.
+
+## Seletores class e id
+
+O seletor de classe é definido a partir da declaração do atributo class em um elemento HTML. Já o seletor de identificação é definido com o atributo id.
+
+Em termos de nomenclatura para a definição do nome da classe ou do identificador, não existe uma regra a ser seguida. Procure utilizar nomes que façam sentido, que tenham relação com a função do elemento na página e que, de fato, ajudem a identificá-lo ou classificá-lo.
+
+Logo abaixo, podemos ver um exemplo de sintaxe correspondente à declaração desses dois atributos na HTML e na CSS. Na primeira parte da imagem, é apresentado um fragmento de código HTML. Repare que uma mesma classe, a “texto vermelho”, foi atribuída à tag < h1 > e a uma das tags < p >. Com isso, vemos que uma classe pode ser atribuída a mais de um elemento. Em seguida, note a sintaxe para atribuição de múltiplas classes a um elemento na segunda tag < p >, à qual foram atribuídas as classes “texto_descricao” e “texto_vermelho”.
+
+Em relação ao código CSS, veja que o seletor de id é representado por uma “#” e o de class é representado por um “.”, sendo seguidos de seus nomes. Além disso, foram apresentadas duas formas de sintaxe que produzirão o mesmo efeito. A diferença entre ambas é que, na segunda, o nome da tag à qual a identificação ou classe foi atribuída precede o respectivo sinal.
+
+**vide fragmentos HTML**
+
+## Restrições e boas práticas na utilização do identificador
+
+Embora não exista um padrão ou preferência quanto a utilizar o seletor id ou class, é importante frisar novamente que um id deve ser aplicado a apenas um elemento, enquanto a class pode ser aplicada a um ou vários elementos.
+
+Embora o navegador não verifique se um mesmo id foi utilizado em diferentes elementos, tal método pode trazer alguns problemas de estilização e comportamento, uma vez que esse seletor também é bastante usado pelo Javascript. Frente a isso, adote a boa prática de definir identificadores únicos.
+
+### Seletores de atributo 
+
+Esses seletores utilizam nomes de atributos dentro de colchetes, sendo possível combiná-los com valores. Abaixo são mostrados alguns dos seletores de atributo disponíveis:
+
+*   [checked] - seleciona todos os elementos que possuem o atributo checked.
+*   [type=’text’] - seleciona todos os elementos do tipo text.
+
+Os seletores de atributo são flexíveis, permitindo inúmeras combinações. Por exemplo, é possível usá-los para selecionar todas as imagens com uma determinada extensão, selecionar todos os elementos com o atributo title contendo determinado valor etc.
+
+### Seletores baseados em relacionamento
+
+É possível declarar estilos utilizando a relação entre os elementos. A tabela a seguir mostra os principais seletores baseados em relacionamento.
+
+| Seletor | Seleção |
+|-----|------|
+| H1 P | Qualqyer elemento P que seja descendente (filho, neto etc.) de um elemento H1 |
+| H1 > P | Qualquer elemento P que seja filho de um elemento H1 |
+| H1 + P | Qualquer elemento P que seja o próximo irmão de um elemento H1 (ou seja, o próximo filho de um mesmo pai.) |
+
+
+Para uma melhor compreensão quanto à descendência e ao parentesco mencionados, veja a figura abaixo. Essa é uma representação simbólica da árvore DOM (representação estruturada do documento HTML em formato de árvore) contendo elementos representando tags HTML. Veja ainda a explicação de cada relação e aplicação dos seletores baseados em relacionamento.
+
+### Propriedade CSS
+
+Existem inúmeras propriedades CSS, desde as definidas pela sua especificação, ditas propriedades padrão, até as proprietárias, que funcionam apenas em alguns navegadores. A fim de garantir uma maior compatibilidade, assim como otimizar o desenvolvimento, deve-se sempre dar preferência às primeiras. A seguir, são apresentadas algumas das propriedades mais comuns da CSS.
+
+| Propriedade| Função |
+|--|--|
+| Background | Estabiliza o fundo de elementos. Para tal há uma série de propriedades, além do atalho "Background", como "background-color", "background-image" etc. 
+| Border | Controla as bordas de um elemento, sendo possível definir suas cores, espessuras, entre outras propriedades
+| Top, Botton, Right e Left | Controlam o posicionamento, relativo ou absoluto, dos elementos em relação a outros elementos. 
+| Font-family, Font-size, Font-weight etc | Série de propriedades usada para estilizar o conteúdo textual de um elemento no que diz respeito a fonte, como a família de fontes, seu tamanho, peso (mais clara ou mais escura - negrito) etc. 
+| Height | Define a altura de um elemento
+| List-style, List-style-image etc | Propriedades usadas para estilizar as listas HTML.
+| Margin | Controla a distância em função da margem de um elemento para outro
+| Padding | Controla a distância entre as bordas e o conteúdo de eum elemento
+| Position | Define como um elemento deve ser posicionado na página
+| Text-... | Muitas propriedades controlam o comportamento do conteúdo textual de um elemento, como alinhamento (justificado, centralizado etc), aparência (sublinhado etc.) etc.
+| Width | Define a largura de um elemento
+| Z-index | Define a profundidade de um elemento -usado, por exemplo, para sobreposição de elementos. 
+
+****
+### Integrando a CSS à HTML
+
+Há três formas usuais de aplicar estilos em um documento HTML fazendo uso de CSS: Inline, Interna e Externa.
+
+Além dessas, a HTML5 permite ainda a aplicação em escopo. Vamos conhecer um pouco mais de cada uma delas?
+
+*   CSS inline
+    *   Essa forma implica em declarar o estilo CSS diretamente na tag, no código HTML. Veja a seguir um exemplo de um estilo apresentado anteriormente sendo aplicado de forma inline.
+
+A declaração inline faz uso do atributo style procedido por declarações separadas por ponto e vírgula “;”. Esse atributo pode ser usado em qualquer tag HTML.
+~~~~~~~~
+<p style="background-color: blue;">Texto parágrafo</p>
+~~~~~~~~
+*   CSS interna
+    *   Também chamada de CSS incorporada, é declarada na seção < head > do documeneto HTML.
+
+~~~~~~~~
+<html>
+    <head>
+        <style type="text/css">
+            p{
+                background-color: blue;
+            }
+    </head>
+...
+</html>
+
+~~~~~~~~
+
+*   CSS externa
+    *   Nesse caso, os estilos são declarados em um arquivo externo, com extensão “.css” e vinculados ao documento HTML por meio da tag < link > ou da diretiva @import dentro da tag < head >. Ambos os exemplos podem ser vistos logo a seguir:
+
+~~~~~~~~
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css href="estilos.css" />
+...
+    </head>
+</html>
+~~~~~~~~
+
+~~~~~~~~
+<html>
+    <head>
+        <style>
+            @import url("estilos.css");
+        </style>
+    </head>
+</html>
+~~~~~~~~
+
+*   CSS em escopo
+    * Essa forma de aplicação de estilo foi criada a partir da HTML5. Por meio dela, é possível aplicar estilos no âmbito de escopo, ou seja, específicos para as seções da página em que foram declarados, incluindo os seus elementos filhos. No código abaixo, a tag < p > receberá os estilos definidos, sendo a mesma regra válida para outros estilos e elementos que, porventura, venham a fazer parte da < div >.
+
+~~~~~~~~
+<div>
+
+    <style type="text/css">
+        /* Estes estilos serão aplicados apenas dentro da DIV */
+        p{
+            background-color: blue;
+        }
+    </style>
+    <p>Texto do parágrafo</p>
+
+
+</div>
+~~~~~~~~
+
+### Efeito cascata 
+
+Quando trabalhamos com CSS, é comum nos depararmos com a declaração conflitante de estilos, ou seja, diferentes definições de estilo para um mesmo elemento. Nessas situações, entra em ação o Efeito Cascata. Para entendermos a definição desse efeito, é preciso abordarmos outros dois conceitos: **herança** e **especificidade**.
+
+### Herança
+
+A CSS permite que a aplicação de propriedades a elementos pais seja herdada pelos seus elementos filhos. Tomemos como exemplo o código abaixo.
+
+~~~~~~~~
+div{
+    color: blue;
+}
+
+<div> 
+    Texto solto na DIV
+    <p>Texto do parágrafo que é 'filho' da Div</p>
+</div>
+~~~~~~~~
+O resultado do fragmento de código mostrará tanto o texto solto quanto o texto dentro da tag < p > com a cor azul. Isso significa que a tag < p > herdou o estilo definido para o seu pai, a tag < div >.
+
+> Essa capacidade de herdar estilos caracteriza o que chamamos de Efeito Cascata.
+
+*Cabe destacar que nem todas as propriedades CSS podem ser herdadas pelos filhos. Um exemplo são as propriedades relacionadas à formatação das boxes (que veremos mais adiante), como largura, altura, entre outras.*
+
+### Especificidade
+
+Para entender o que é a especificidade no âmbito das folhas de estilo, vamos recorrer a mais um exemplo.
+
+~~~~~~~~
+...
+div{
+    color: blue;
+}
+<div>
+    Texto solto na Div
+    <p>Texto do parágrafo que é "filho" da DIV</p>
+</div>
+...
+~~~~~~~~
+
+Perceba que o fragmento da figura exemplo de herança em CSS foi adaptado. Antes, era aplicado o conceito de herança, assim o texto dentro da tag filha assumia o estilo definido para o seu pai. Agora, há um estilo específico definido para todas as tags < p > que sejam filhas de tags < div >. Com isso, ao visualizarmos o resultado no navegador, teremos o texto solto na cor azul e o texto dentro da tag na cor vermelha.
+
+Esse foi um exemplo simples. A CSS é bastante flexível e nos permite definir diferentes níveis de especificidade. Entretanto, é importante termos cuidado com a sobreposição de estilos, ou seja, diferentes estilos definidos para um mesmo elemento em diferentes partes de nosso código CSS. A regra, nesse caso, é: prevalecerá o estilo mais específico. No exemplo acima, a primeira declaração (para a tag div) é generalizada; a segunda (div p), específica.
+
+###  Dicas sobre as regras de precedência
+
+A regra de precedência em relação às formas de inclusão da CSS segue esta ordem:
+
+1.  Os estilos interno e de escopo têm precedência sobre os estilos em arquivos externos.
+2.  Os estilos inline têm precedência sobre estilos internos, de escopo e externos. 
+
+*Quanto aos seletores, a **regra de precedência** segue esta ordem :*
+
+1.  Seletores de elemento
+2.  Seletores de classe
+3.  Seletores de identificação
+
+Seguindo as regras de especificidade, sua aplicação resultaria na apresentação do texto dentro da tag < p > na cor vermelha, pois sua declaração de estilo é mais específica que a utilizada para a **tag < p >** (texto azul), que é generalizada. Entretanto, a utilização do valor **!important,** que se enquadra no que chamados de **css hack**, na declaração mais generalizada, faz com que esse estilo se sobreponha ao específico. Logo, o código acima resulta na apresentação do texto dentro da **tag < p >** na cor azul.
+
+
+### Recursos de cores
+
+Com a utilização de CSS, podemos manipular as cores de elementos HTML, seja na aparência das caixas seja na cor de texto. Para isso, há uma série de propriedades CSS disponíveis para diversos elementos, mas antes vamos abordar as formas de definição de cores.
+
+### Formas de escrita de cores
+
+As cores em CSS podem ser escritas de três modos:
+
+*   Com palavras-chave ou notação hexadecimal: blue, red, #ffffff etc. 
+
+*   Com um sistema de coordenada cúbica RGB, com as notações rgb() e rgba().
+
+*   Com um sistema de coordenada cilindrica HSL, com as notações hsl() e hsla().
+
+### Propriedades de cor
+
+Essas propriedades se referem a quais elementos podemos definir cores.
+
+Veja na tabela a seguir as principais propriedades relacionadas à cor, bem como os elementos aos quais podem ser aplicadas.
+
+| **Propriedade** | **Serve para definir** | **Onde pode ser utilizada** |
+|--|--|--|
+| color | Cor de textos | Elementos que contenham texto, como < h1 > ... < h6 >, < p >, < header >, < section > etc. |
+| background-color | Cor de fundo de elementos | Aplica-se a qualquer elemento HTML. |
+| border-color | Cor da borda | Aplica-se a qualquer elemento HTML. 
+| outline-color | Cor da borda externa | Aplica-se a qualquer elemento HTML. |
+
+### Recursos de textos e fontes
+
+A estilização de textos com o uso de CSS é dividida em duas partes.
+
+Em linhas gerais, os navegadores aplicam estilos padrões quando renderizam conteúdos textuais. Veja a seguir algumas propriedades CSS que alteram esse comportamento padrão.
+
+*   Layout do texto
+
+    *   Espaçamento entre os caracteres e linhas; alinhamento em relação ao container.
+
+*   Estilos das fontes
+
+    *   Família, tamanho, efeitos como negrito etc.
+
+Em linhas gerais, os navegadores aplicam estilos padrões quando renderizam conteúdos textuais. Vamos conhecer, a seguir, algumas propriedades CSS que alteram esse comportamento padrão.
+
+### Alinhamento de texto
+
+A propriedade text-align é usada para controlar o alinhamento do texto em razão do container no qual está inserido.
+
+Tal propriedade pode assumir quatro valores: left, right, center e justify. Como os nomes indicam, essas propriedades alinham o texto à esquerda, à direita, ao centro ou de forma justificada.
+
+### Espaçamento entre linhas
+
+A propriedade line-height permite alterar o espaçamento vertical entre as linhas de texto. Seus valores possíveis são:
+
+*   Normal
+
+    *  Valor padrão do navegador (entre 1 e 1.2 em relação ao font-size, dependendo do navegador). 
+
+*   Número
+
+    *   Valor inteiro ou decimal que será multiplicado ao tamanho da fonte.
+
+*   Comprimento
+
+    *   Valor unidades como pixels, pontos, “em” etc.
+
+A maneira mais recomendada para declarar o espaçamento entre linhas é utilizando o valor em número. Desse modo, o espaçamento será o resultado da multiplicação do valor definido pelo tamanho da fonte.
+
+**Exemplo:**
+
+*Line-height: 1.5; font-size: 12px; onde valor 1.5 será multiplicado pelo valor da propriedade font-size, resultando no valor de 18px de espaçamento.*
+
+### Espaçamento entre letras e palavras
+
+As propriedades letter-spacing e word-spacing permitem alterar o espaçamento entre letras e/ou palavras. Podem assumir valores de comprimento – “px”, “pt” etc.
+
+### Fontes
+
+Em relação às fontes, há propriedades CSS para definir família, tamanho, estilo, entre outras possibilidades. Vamos conhecer as propriedades mais usadas?
+
+*   font-family
+
+    Utilizada para definir a família da fonte, utilizada na página web ou em partes do seu conteúdo.
+
+*   font-size
+
+    É responsável por definir o tamanho do texto. 
+
+*   font-style
+
+    Usada na estilização de textos aplicando o efeito itálico, obliquo etc
+
+*   font-weight
+
+    O peso de uma fonte é definido com a utilização dessa propriedade. Com ela é possível aplicar o efeito de negrito em uma escala. 
+
+
+Existem boas práticas e cuidados a serem levados em consideração quando se trabalha com estilização de fontes usando CSS. Um desses cuidados diz respeito ao **controle** sobre a **possível degradação** que pode ocorrer na página. Portanto, deve-se tomar os devidos cuidados optando pela utilização de uma lista de fontes e mantendo por último as fontes genéricas, como Serif, Sans Serif e Monospace. Desse modo, haverá maior garantia e controle sobre o que o usuário verá como resultado.
+
+### Web fontes
+
+As Web Fontes são um importante recurso em termos de tipografia. Se antes a sua estilização ficava restrita àquelas disponíveis nos sistemas operacionais dos usuários, a partir da implementação da regra @font-face tornou-se possível a utilização de Web Fontes. Essa nova propriedade permite a utilização de fontes que, ao serem definidas, são baixadas pelo navegador no momento de carregamento da página. Logo, sua utilização permite um controle maior do layout de uma página no que diz respeito às fontes, além da possibilidade de serem usadas fontes com maior apelo visual.
+
+### Como utilizar a regra @font-face
+
+A declaração da regra @font-face é feita pela definição de duas principais propriedades: font-family e src. Na primeira, definimos um nome para a família da fonte que estamos importando, usando-o ao longo do arquivo CSS. A segunda aponta para a url na qual o arquivo da fonte se encontra. Vamos ver a seguir a fonte Awesome sendo declarada.
+
+Em relação à font-family, a partir do momento da sua declaração, o nome definido poderá ser utilizado para estilizar qualquer outro elemento ao longo do CSS – considere que podemos tanto utilizar uma única família de fontes para o documento HTML inteiro como a combinação de diferentes famílias.
+
+O código também mostra que as fontes incorporadas podem tanto estar hospedadas localmente quanto na internet. Além disso, há outros elementos na declaração dos quais ainda não falamos. São eles: as funções  **local**  e  **format**.
+
+Cabe destacar também os diferentes tipos existentes de web fontes. Aprofundaremos esses elementos extra a seguir.
+
+*   Função local
+
+    *   Essa função indica ao navegador que, antes de fazer o download da fonte definida, deverá verificar se ela já está disponível na máquina do usuário.
+
+*   Função format
+
+    *   Também chamada de dica, essa função opcional é utilizada quando se deseja declarar vários formatos de fontes, indicando justamente o formato de cada uma. No exemplo acima, temos os formatos “woff”, “woff2”, “ttf” e “eot”.
+
+
+### Abreviaturas ou atalhos
+
+As Folhas de Estilo permitem a aplicação de algumas propriedades utilizando abreviaturas ou atalhos. O exemplo a seguir mostra as duas formas de realizar uma mesma declaração:
+
+**Forma original**
+
+~~~~
+p{
+    margin-top: 10px;
+    margin-botton: 8px;
+    margin-right: 6px;
+    margin-left: 4px;
+}
+~~~~
+
+**Forma abreviada**
+
+~~~~
+p{
+    margin: 10px 6px 8px 4px;
+}
+~~~~
+
+**Forma original**
+
+~~~~
+p{
+    padding-top: 10px;
+    padding-botton: 8px;
+    padding-right: 6px;
+    padding-left: 4px;
+}
+~~~~
+**Forma abreviada**
+~~~~
+p{
+    padding: 10px 6px 8px 4px;
+}
+~~~~
+
+**Forma original**
+
+~~~~
+p{
+    border-width: 2px;
+    border-style: solid;
+    border-color: #cccccc;
+}
+~~~~
+
+**Forma abreviada**
+
+~~~~
+p{
+    border: 2px solid #cccccc;
+}
+~~~~
+
+**Forma original**
+
+~~~~
+p{
+    background-color: #000000;
+    background-image: url(imagem.jpg);
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+~~~~
+
+**Forma abreviada**
+
+~~~~
+p{
+    background: #000000 url(imagem.jpg) no-repeat top left;
+}
+~~~~
+
+**Forma original**
+
+~~~~
+p{
+    font-size: 1em;
+    line-height: 1.5em;
+    font-weight: bold;
+    font-style: italic;
+    font-family: verdana;
+}
+~~~~
+
+**Forma abreviada**
+
+~~~~
+p{
+   font: 1em/1.5em bold italic verdana;
+}
+~~~~
+
+**Forma original**
+
+~~~~
+ul{
+   list-style: #000000;
+   list-style-type: disc;
+   list-style-position: outside;
+   list-style-image: url(imagem.jpg) 
+}
+~~~~
+
+**Forma abreviada**
+
+~~~~
+ul{
+    list-style: disc outside url(imagem.jpg)
+}
+~~~~
+
+### Fontes
+
+
+# Conceitos avançados de CSS
+
+## Conceitos de box model
+
+Nos módulos anteriores, vimos os conceitos básicos de CSS, sua sintaxe, seus elementos e suas formas de integração com HTML. Abordamos também como aprimorar o design de páginas com os estilos de cores, texto e fontes.
+
+Neste módulo, avançaremos um pouco mais e percorreremos os conceitos de Box Model (modelo de caixas ou retângulos), Pseudoclasses e Pseudoelementos e Posicionamento.
+
+*dentro do conceito de Box Model – que, em CSS, está relacionado a design e layout – nossos boxes possuem quatro componentes principais: margem (margin), borda (border), preenchimento (padding) e conteúdo (content).*
+
+
+## Conceitos de pseudoclasses e pseudoelementos
+
+Uma declaração CSS é composta pelo elemento que se deseja estilizar, pela propriedade a ser estilizada e pelo valor a ser atribuído. Além disso, vimos que o elemento pode ser definido de maneira ampla (utilizando-se o nome da tag), específica (pelo seu identificador único) e seletiva (com a utilização de classes).
+
+Um elemento filho pode, ainda, herdar as propriedades de um elemento pai. Todos esses modos de definir estilo são bastante abrangentes. Entretanto, existem algumas formas especiais e muito úteis para se aplicar estilos: as  **pseudoclasses**  e os  **pseudoelementos**. Veremos a seguir as suas definições e como utilizá-las.
+
+
+Uma declaração CSS é composta pelo elemento que se deseja estilizar, pela propriedade a ser estilizada e pelo valor a ser atribuído. Além disso, vimos que o elemento pode ser definido de maneira ampla (utilizando-se o nome da tag), específica (pelo seu identificador único) e seletiva (com a utilização de classes).
+
+Um elemento filho pode, ainda, herdar as propriedades de um elemento pai. Todos esses modos de definir estilo são bastante abrangentes. Entretanto, existem algumas formas especiais e muito úteis para se aplicar estilos: as  **pseudoclasses**  e os  **pseudoelementos**. Veremos a seguir as suas definições e como utilizá-las.
+
+##  Pseudoclasses
+As pseudoclasses são utilizadas para definir um estado especial de um elemento. Por exemplo, podemos mudar o estilo de um elemento ao passarmos o mouse sobre ele (evento mouseover). Esse novo estilo é temporário, ou seja, não corresponde ao seu estado natural. Também podemos mudar o estilo de um link que foi clicado, alterando sua cor ou alguma outra propriedade.
+
+A sintaxe para declaração da pseudoclasse é composta pela palavra-chave correspondente ao nome da pseudoclasse precedido pelo sinal de dois pontos. Veja o exemplo a seguir:
+
+~~~~
+ div:hover{background-color:#000000;}
+~~~~
+
+## Pseudoelementos
+
+Os pseudoelementos são palavras-chave que, adicionadas/relacionadas a um seletor, permitem que uma parte específica dele seja estilizada. A imagem a seguir mostra duas declarações CSS, uma sem e outra com o uso de pseudoelemento. Em ambas, é definido que a primeira letra de texto em um parágrafo tenha tamanho e cor diferentes do restante do texto.
+
+Ao analisar, codificar e testar o código acima, você perceberá que, no primeiro parágrafo, foi necessário utilizar um elemento a mais, a tag < span >, ao redor da primeira letra do texto para poder estilizá-la. Já no segundo parágrafo, o mesmo estilo foi alcançado apenas com o uso do pseudoelemento first-letter. A utilização do pseudoelemento diminui a quantidade de código, tornando sua compreensão mais clara.
+
+Cabe destacar outro ponto do exemplo relacionado à sintaxe dos pseudoelementos: neles são usados dois pontos duplos (ou dobrados) para a declaração. Esse uso proposital é para diferenciá-los das pseudoclasses.
+
+*vide imagem pseudoelementos*
+
+## Conceitos de layout
+### Layout em colunas e Grid Layout
+
+Esses dois conceitos são importantes quando tratamos da estrutura visual de páginas HTML. Em uma definição simplista, ambos tratam de como os elementos boxes podem ser posicionados e organizados em uma página. Veja na figura layout CSS em colunas, logo a seguir, a estrutura em colunas de uma página.
+
+*vide imagem layout e grid*
+
+## A propriedade position
+
+A propriedade CSS responsável pelo posicionamento é a position. Seus valores possíveis são:  **static, relative, fixed, absolute e sticky**. Além disso, as propriedades top, bottom, right e left são usadas em conjunto, a fim de definir os valores das respectivas distâncias e, consequentemente, do posicionamento. Tais propriedades, inclusive, só podem ser usadas quando for definido um valor para position. A seguir, apresentaremos cada uma dessas cinco propriedades.
+
+### Position static
+
+Essa é a  **posição padrão**  dos elementos. Desse modo, elementos definidos como static ou sem a propriedade position são posicionados naturalmente, de acordo com o fluxo normal da página, não assumindo nenhuma localização especial. Inclusive, as propriedades top, bottom, right e left não são refletidas em elementos estáticos.
+
+### Position relative
+
+A definição da propriedade “position:relative;” para um elemento faz com que ele seja posicionado de modo relativo à sua posição normal. Com isso, ao definirmos valores para as propriedades top, bottom, right e left, ajustamos a sua posição em relação à sua posição natural.
+
+### Position fixed
+
+O valor  **fixed**  é utilizado quando desejamos definir uma posição fixa para um elemento na página. Com isso, independentemente do scroll, de rolarmos a página para cima ou para baixo, o elemento sempre permanecerá no mesmo local. As propriedades  **top, bottom, right**  e  **left**  devem ser usadas para definir o lugar no qual o elemento será fixado. Esse elemento é posicionado em relação à viewport/janela do navegador. Com isso, ele “flutuará” sobre os demais conteúdos da página, ficando fixo onde foi colocado e não ocupando, assim, a posição original na qual foi declarado no HTML.
+
+### Position absolute
+
+A posição absolute faz com que um elemento seja posicionado em relação à localização do seu elemento ancestral mais próximo – o qual também deverá estar posicionado, ou seja, não poderá ser static.
+
+Quando o elemento definido como absolute for o primeiro elemento da página, ele então será posicionado em relação ao  **< body >**. Com isso, tal elemento acompanhará a rolagem da página.
+
+### Position sticky
+
+Esse valor para a propriedade position faz com que um elemento seja posicionado com base na posição de rolagem da página (scroll). Com isso, seu comportamento varia entre o relativo e o fixado, dependendo da posição do scroll.
+
+Tal propriedade é mais recente em termos de especificação, assim não possui suporte em todas as versões dos navegadores. É usada, normalmente, quando queremos criar um efeito de sobreposição de conteúdo. Na prática, o elemento é visualizado ao abrirmos uma página. Ao rolarmos para baixo, ele se mantém fixo, com os demais conteúdos passando sob ele.
+
+
+# Frameworks CSS
+
